@@ -1,0 +1,17 @@
+[project]
+name = "claude-pr"
+version = "1.0.0"
+description = "Open GitHub pull requests from local changes, with Claude-written descriptions and Mermaid diagrams."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["anthropic>=1.13"]
+
+[project.scripts]
+claude-pr = "claude_pr:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["claude_pr"]
