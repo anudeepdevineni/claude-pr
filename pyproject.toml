@@ -3,8 +3,12 @@ name = "claude-pr"
 version = "1.0.0"
 description = "Open GitHub pull requests from local changes, with Claude-written descriptions and Mermaid diagrams."
 readme = "README.md"
+authors = [{ name = "Anudeep Devineni" }]
 requires-python = ">=3.10"
 dependencies = ["anthropic>=1.13"]
+
+[project.urls]
+Repository = "https://github.com/anudeepdevineni/claude-pr"
 
 [project.scripts]
 claude-pr = "claude_pr:main"

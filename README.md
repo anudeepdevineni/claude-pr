@@ -1,9 +1,10 @@
 # claude-pr
 
-Turn your local git changes into a GitHub pull request with one command. Claude reads the diff
-and writes the title, summary, change list, test checklist and a **Mermaid architecture
-diagram**. The tool then commits, pushes and opens the PR through the GitHub REST API, so
-reviewers can see the shape of the change before reading any code.
+A command-line tool that turns your local git changes into a GitHub pull request. It sends
+the diff to Claude, which writes the title, summary, change list, test checklist and a
+Mermaid diagram of how the changed parts connect. Then it commits, pushes and opens the PR
+through the GitHub REST API. Every PR body it opens has the diagram in an `## Architecture`
+section, and GitHub renders it inline.
 
 ## How it works
 
@@ -22,6 +23,7 @@ flowchart LR
 You need Python 3.10+, git, an [Anthropic API key](https://console.anthropic.com/) and access to GitHub.
 
 ```bash
+git clone https://github.com/anudeepdevineni/claude-pr.git
 cd claude-pr
 pip install -e .
 ```
